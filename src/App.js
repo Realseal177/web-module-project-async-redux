@@ -1,12 +1,12 @@
 import React from 'react';
-import Fruit from './components/Fruit';
+import Brewery from './components/Brewery';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      Get Fruit Info
-      <Fruit />
+      Get Brewery Info
+      <Brewery />
     </div>
   );
 }

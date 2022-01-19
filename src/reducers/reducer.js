@@ -1,16 +1,12 @@
 import { FETCH_START, FETCH_FAIL, FETCH_SUCCESS} from './../actions/actions';
 
 const initialState = {
-    fruit: {
-        name: 'Apple',
-        family: 'Rosaceae',
-        nutritions: {
-            carbohydrates: 11.4,
-            protein: 0.3,
-            fat: 0.4,
-            calories: 52,
-            sugar: 10.3
-        },
+    brew: {
+        name: '10-56 Brewing Company',
+        brewery_type: 'micro',
+        city: 'Knox',
+        state: 'Indiana',
+        website_url: '',
     },
     isFetching: false,
     error: '',
@@ -21,21 +17,21 @@ export const reducer = (state = initialState, action) => {
         case FETCH_START:
           return {
             ...state,
-            fruit: {},
+            brew: {},
             isFetching: true,
             error: ''
           };
         case FETCH_FAIL:
           return {
             ...state,
-            fruit:{},
+            brew:{},
             isFetching: false,
             error: action.payload
           };
         case FETCH_SUCCESS:
           return {
             ...state,
-            fruit: action.payload,
+            brew: action.payload,
             isFetching: false,
             error: ''
           };
