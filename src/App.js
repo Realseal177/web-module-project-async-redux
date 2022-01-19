@@ -1,10 +1,12 @@
 import React from 'react';
+import Fruit from './components/Fruit';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      Async Redux Project
+      Get Fruit Info
+      <Fruit />
     </div>
   );
 }
