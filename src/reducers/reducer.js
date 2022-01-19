@@ -1,13 +1,7 @@
 import { FETCH_START, FETCH_FAIL, FETCH_SUCCESS} from './../actions/actions';
 
 const initialState = {
-    brew: {
-        name: '10-56 Brewing Company',
-        brewery_type: 'micro',
-        city: 'Knox',
-        state: 'Indiana',
-        website_url: '',
-    },
+    brew: [{}],
     isFetching: false,
     error: '',
 }
@@ -17,14 +11,14 @@ export const reducer = (state = initialState, action) => {
         case FETCH_START:
           return {
             ...state,
-            brew: {},
+            brew: [],
             isFetching: true,
             error: ''
           };
         case FETCH_FAIL:
           return {
             ...state,
-            brew:{},
+            brew:[],
             isFetching: false,
             error: action.payload
           };
